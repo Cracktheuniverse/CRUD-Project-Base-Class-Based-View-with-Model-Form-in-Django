@@ -1,0 +1,15 @@
+{% extends 'enroll/base.html' %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% block content %}
+    <div class="row">
+        <div class="col-sm-8 offset=2">
+            <h4 class="alert alert-info"> Update Student Information </h4>
+            <form action=""method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="Submit" class="btn btn-success" value="updatedata">
+                <a href="{% url 'addandshow'%}" class="btn btn-info">Back To Home </a>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
